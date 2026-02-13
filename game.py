@@ -1,29 +1,11 @@
 import random
 import combat
+import loot
 
 state = 0
 playing = True
 playerInfo = {"Health":"100", "Weapon":"", "Armor":"", "Potions":"2", "Sanity":"100"}
 enemy = []
-
-weapons = {
-"Stick":1,
-"Wooden Sword":2,
-"Iron Sword":10,
-"Sword of Annihilation":50,
-"Old Sock":5,
-"Feather":1,
-"Steel Sword":15,
-"Wand of Fire":13
-}
-
-armors = {
-"Old Shirt":2,
-"Leather Armor":5,
-"Iron Plate":10,
-"Steel Mail":15,
-"Wizard Robes":3
-}
 
 
 def input_validator(pCHoice):
@@ -40,6 +22,21 @@ def input_validator(pCHoice):
         else:
             print("Invalid Input, Please use the number associated with the option.\n")
             pCHoice = input("Enter the number associated with the option! ")
+
+def Random_Encounter():
+    if random.randomint(0, 100) <= 30:
+        enemy = combat()
+        print(f"A {enemy['name']} appears!")
+        enemyhealth = enemy['health']
+        enemyattack = enemy['attack']
+
+def chest_loot():
+    if random.randomint(0, 100) <= 30:
+        itemget = loot()
+        if itemget == "Nothing":
+            print("You found nothing")
+        else:
+            print(f"You found an Item!\n It is {itemget[name]}!")
 
 
 print ("Welcome to Adventure simulator!! Please choose an option: (Use the number associated to continue)")
