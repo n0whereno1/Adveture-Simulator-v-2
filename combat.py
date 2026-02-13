@@ -1,0 +1,9 @@
+def combat():
+    pass
+
+
+
+
+enemies = {
+
+}
