@@ -64,14 +64,37 @@ match state:
         pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
         match pCHoice:
             case "1":
+                state = 4
                 print("boo")
             case "2":
+                state = 5
                 print("boo")
             case "3":
+                state = 6
                 print("boo")
     case 2:
-        print("You stand on a coastal beach. The sun is glistenig on the water surface choose the option you wish to procede with\n1. Travel down the path\n 2. Go through the trees\n 3. Stay where you are")
+        print("You stand on a coastal beach. The sun is glistening on the water surface choose the option you wish to procede with\n1. Go North\n 2. Go South\n 3. Swim into the sea")
         pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
+        match pCHoice:
+            case "1":
+                state = 7
+                print("boo")
+            case "2":
+                state = 8
+                print("boo")
+            case "3":
+                state = 9
+                print("boo")
     case 3:
-        print("You enter the dark forest and you see a path surrounded by thick pine and oak trees, choose the option you wish to procede with\n1. Travel down the path\n 2. Go through the trees\n 3. Stay where you are")
+        print("The floor under your feet caves in and you get knocked out on the fall. When you wake you are in an aged room walled with mossy bricks. There are three doors, choose the option you wish to procede with\n1. Left\n 2. Center\n 3. Right")
         pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
+        match pCHoice:
+            case "1":
+                state = 10
+                print("boo")
+            case "2":
+                state = 11
+                print("boo")
+            case "3":
+                state = 12
+                print("boo")
