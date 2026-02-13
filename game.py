@@ -111,3 +111,42 @@ while playing == True:
                 case "3":
                     state = 12
                     print("boo")
+        case 5:
+            print("Traveling down the path you hear a sound that sounds like a scream and see a fork in the path. What do you do?\n 1. Follow it\n 2. Turn down the path\n 3. Turn back and run")
+            pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
+            match pCHoice:
+                case "1":
+                    state = 10
+                    print("boo")
+                case "2":
+                    state = 11
+                    print("boo")
+                case "3":
+                    state = 12
+                    print("boo")
+        case 6:
+            print("Traveling down the path you hear a sound that sounds like a scream and see a fork in the path. What do you do?\n 1. Follow it\n 2. Turn down the path\n 3. Turn back and run")
+            pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
+            match pCHoice:
+                case "1":
+                    state = 10
+                    print("boo")
+                case "2":
+                    state = 11
+                    print("boo")
+                case "3":
+                    state = 12
+                    print("boo")
+        case 7:
+            print("Traveling down the path you hear a sound that sounds like a scream and see a fork in the path. What do you do?\n 1. Follow it\n 2. Turn down the path\n 3. Turn back and run")
+            pCHoice = pCHoice = input_validator(input("Enter the number associated with the option! "))
+            match pCHoice:
+                case "1":
+                    state = 10
+                    print("boo")
+                case "2":
+                    state = 11
+                    print("boo")
+                case "3":
+                    state = 12
+                    print("boo")
