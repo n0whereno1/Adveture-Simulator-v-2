@@ -1,8 +1,9 @@
 import random
-import combat.py as combat
+import combat
 
 state = 0
 playerInfo = {"Health":"100", "Weapon":"", "Armor":"", "Potions":"2", "Sanity":"100"}
+enemy = []
 
 weapons = {
 "Stick":1,
@@ -24,14 +25,13 @@ armors = {
 }
 
 
-def stat_Check(pCHoice):
-    print(playerInfo)
-
 def input_validator(pCHoice):
     valid = False
     while valid == False:
-        if pCHoice == "Stats":
-            stat_Check(pCHoice)
+        if pCHoice == "Stats" or pCHoice == "stats":
+            #stat_Check()
+            print(playerInfo)
+            pCHoice = input("Make a selection: ")
         elif pCHoice.isnumeric() and int(pCHoice) > 0 and int(pCHoice) < 4:
             valid == True
             return pCHoice
