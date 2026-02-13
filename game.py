@@ -1,4 +1,3 @@
-import pygame as engine
 import random
 import combat.py as combat
 
