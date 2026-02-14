@@ -37,6 +37,12 @@ def chest_loot():
             print("You found nothing")
         else:
             print(f"You found an Item!\n It is {itemget[name]}!")
+    elif random.randomint(0, 100) >=70:
+        itemget = armor()
+        if itemget == "Nothing":
+            print("You found nothing")
+        else:
+            print(f"You found an Item!\n It is {itemget[name]}!")
 
 
 print ("Welcome to Adventure simulator!! Please choose an option: (Use the number associated to continue)")
