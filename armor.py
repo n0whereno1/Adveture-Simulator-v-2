@@ -7,6 +7,7 @@ armors = [
     {"name": "Steel Mail", "ar":15},
     {"name": "Wizard Robe", "ar":3},
     {"name": "Debug Hat", "ar":500},
+    {"name": "Ring of Zhitpaant", "ar":0},
 ]
 
 

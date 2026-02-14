@@ -1,10 +1,11 @@
 import random
 import combat
 import loot
+import armor
 
 state = 0
 playing = True
-playerInfo = {"Health":"100", "Weapon":"", "Armor":"", "Potions":"2", "Sanity":"100"}
+playerInfo = {"Health":100, "Weapon Damage:":5, "Armor":0, "Potions":2, "Sanity":100}
 enemy = []
 
 

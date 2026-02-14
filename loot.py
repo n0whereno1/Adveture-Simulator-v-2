@@ -9,6 +9,8 @@ weapons = [
     {"name": "Steel Sword", "ar":15},
     {"name": "Wand of Fire", "ar":20},
     {"name": "Debug Stick", "ar":500},
+    {"name": "Cheec Klaper", "ar":23},
+    {"name": "Apprentice Sword", "ar":12},
 ]
 
 #armors = [
