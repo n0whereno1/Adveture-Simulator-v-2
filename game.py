@@ -1,6 +1,6 @@
 import random
 import combat
-import loot
+from loot import random_loot
 import armor
 
 state = 0
@@ -23,6 +23,8 @@ def input_validator(pCHoice):
         else:
             print("Invalid Input, Please use the number associated with the option.\n")
             pCHoice = input("Enter the number associated with the option! ")
+
+
 
 def Random_Encounter():
     if random.randomint(0, 100) <= 30:
@@ -73,6 +75,17 @@ while playing == True:
             match pCHoice:
                 case "1":
                     state = 4
+                    if random.choice([True, False]):
+                        loot = random_loot()
+                        if loot != 'Nothing':
+                            answer = input(f'You found {loot['name']}! Would you like to equip it? Y/N')
+                            if answer.isdigit() or answer != 'y' or answer != "Y" or answer != 'N' or answer != 'n':
+                                print('Please enter Y or N')
+                            elif answer == 'Y' or answer == 'y':
+                                playerInfo['weapon'] = loot['name']
+                                playerInfo['Weapon Damage'] = loot['ar']
+                            else:
+                                continue
                 case "2":
                     state = 5
                     print("boo")
