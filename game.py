@@ -1,11 +1,13 @@
 import random
-import combat
+import time
+from combat import combat
 from loot import random_loot
-import armor
+from armor import random_armor
+import sys
 
 state = 0
 playing = True
-playerInfo = {"Health":100, "Weapon Damage:":5, "Armor":0, "Potions":2, "Sanity":100}
+playerInfo = {"Health":100, "Weapon:":"", "Weapon Damage:":5, "Armor":0, "Potions":2, "Sanity":100}
 enemy = []
 
 
@@ -20,6 +22,10 @@ def input_validator(pCHoice):
             valid == True
             playing == True
             return pCHoice
+        elif pCHoice == "quit" or "Quit" or 'q':
+            print("Bye for now")
+            time.sleep(4)
+            sys.exit()
         else:
             print("Invalid Input, Please use the number associated with the option.\n")
             pCHoice = input("Enter the number associated with the option! ")
@@ -79,7 +85,7 @@ while playing == True:
                         loot = random_loot()
                         if loot != 'Nothing':
                             answer = input(f'You found {loot['name']}! Would you like to equip it? Y/N')
-                            if answer.isdigit() or answer != 'y' or answer != "Y" or answer != 'N' or answer != 'n':
+                            if answer.isdigit():
                                 print('Please enter Y or N')
                             elif answer == 'Y' or answer == 'y':
                                 playerInfo['weapon'] = loot['name']
